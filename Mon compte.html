@@ -1,0 +1,51 @@
+<!DOCTYPE html> 
+<html lang="fr">
+<head>
+    <meta charset="UTF-8"> 
+    <title>Mon compte</title>
+    <link rel="stylesheet" href="ProjetAnn.css">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Barcode+39&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">  
+</head>
+<body>
+    <!-- Contenu de la page ici -->
+    <header>
+        <div class="TitreEtLogo">
+            <div id="TitreMenu">
+                <h1><strong>Mon Compte</strong></h1>
+            </div>
+            <!--Bouton de connexion au compte-->
+            <a href="#popup" class="login-btn">Se connecter</a>
+        </div>
+    </header>
+
+    <div class="navigation">
+        <form action="Accueil.html" method="get">
+            <button type="submit" class="onglets">Accueil</button>
+        </form>
+        <form action="Inscription.html" method="get">
+            <button type="submit" class="onglets">Inscription</button>
+        </form>
+        <form action="Mon compte.html" method="get">
+            <button type="submit" class="onglets">Mon compte</button>
+        </form>
+        <form action="Contact.html" method="get">
+            <button type="submit" class="onglets">Contact</button>
+        </form>
+    </div>
+<!-- Pop-up de connexion -->
+<div id="popup" class="popup">
+    <h2>Connexion</h2> 
+    <form method="POST" action="Connexion_site.php">
+      <input type="int" name="Id_Employe" placeholder="Id_Employe" required>
+      <input type="password" name="Code_Barre" placeholder="Code_Barre" required>
+      <button type="submit">Se connecter</button>
+    </form>
+    <a href="#" class="close-btn">Fermer</a>
+  </div>
+<div id="Billet">
+    <img id="Etiquette" src="BilletBlanc.png" width="200" height="200">
+    <p class="barcode">123456789</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,299 @@
+/* Styles globaux de la page */
+body {
+    background-color:#b0cba6;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Pour centrer tous les éléments de la page*/
+}
+ 
+/* Zone de Connexion fixée en haut à gauche */
+.ConnexionStatus {
+    position:absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #ffb2c4;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    z-index: 1000; /* Toujours au-dessus */
+}
+
+
+/* Partie Titre,Barre de recherche et Logo */
+.TitrePage {
+    display: flex; /*Active la flexbox*/
+    flex-direction: column;/*Aligne les éléments*/
+    align-items: center;
+    padding: 20px 0;
+    width: 100%;
+    max-width: 1200px;
+    box-sizing: border-box;
+}
+/* Zone contenant le titre et le logo */
+.TitreEtLogo {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    box-sizing: border-box;
+    padding: 0 20px;
+}
+#TitreMenu {
+    color:#ffe3ea;
+    text-align: center;
+    font-size: 36px;
+    margin: 0;
+    width: 100%;
+    display:flex;
+    justify-content: right;
+}
+
+#Logo {
+    border-radius: 30%;
+    margin-left: 90px;
+}
+
+/* Barre de Recherche */
+form.BarreRecherche {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin-top: 20px;
+    max-width: 600px;
+    height: 40px;
+    position: relative;
+}
+
+input.BarreRecherche {
+    flex: 1;
+    padding: 8px 12px;
+    border-radius: 20px 0 0 20px;
+    font-size: 16px;
+    background-color: #ffb2c4;
+    color: white;
+    border: none;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+button.submit {
+    width: 50px;
+    font-size: 16px;
+    background-color: #ffb2c4;
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 0 20px 20px 0;
+    transition: background-color 0.3s;
+    padding: 8px 12px;
+    height: 100%;
+}
+
+
+button.submit:hover {
+    background-color: #ffe3ea;
+}
+/*Conteneur des boutons pour qu'ils soient alignés à gauche*/
+.navigation {
+    display: flex;               /* Active Flexbox */
+    flex-direction: row;      /* Aligne les boutons horizontalement */
+    justify-content: center;/*Aligne les boutons au centre*/
+    align-items: stretch;     /* Aligne les boutons à la même largeur */
+    padding: 20px;               /* Espacement autour des boutons */
+    width: 100%;                /* Largeur du conteneur */
+    gap: 10px; /* Espace entre les boutons*/
+}
+.BoutonInform {
+    display: flex;               /* Active Flexbox */
+    justify-content:flex-start; /*Aligne les boutons gauche*/  
+    width: 100%;                /* Largeur du conteneur */
+}
+.onglets {
+    background-color:#ffb2c4;  /* Couleur de fond des boutons */
+    color: white;                      /* Couleur du texte */
+    padding: 12px 25px;                /* Espacement interne */
+    border: none;                      /* Enlève les bordures */
+    border-radius: 5px;                /* Coins arrondis */
+    font-size: 18px;                   /* Taille du texte */
+    cursor: pointer;                  /* Curseur pointer sur hover */
+    text-align: center;                /* Centrer le texte dans le bouton */
+    transition: background-color 0.3s; /* Animation de la couleur au survol */
+    flex:1;
+}
+/*Pour rajouter un effet au survol*/
+.onglets:hover {
+    background-color:#ffe3ea;
+}
+/*Pour mettre le texte recherche en blanc*/
+input.BarreRecherche::placeholder {
+    color: white;                /* Texte en blanc */
+    opacity: 0.8;                /* Transparence légère */
+}
+
+
+/* Pour styliser la suite de la page d'accueil (phrases d'accroches, dates...)*/
+#Dates {
+    color:#eb997a;
+    text-align: center;
+    font-size: larger;
+}
+#SecondTitre{
+    color:#eb997a;
+    text-align: center;
+    font-size: 40px;
+}
+#accroche {
+    color:#eb997a;
+    text-align:left;
+    font-size: 30px;
+}
+h4{
+    color:#eb997a;
+    text-align:left;
+    font-size: medium;
+}
+#decoration {
+        display: block;
+        margin: 0 auto;          /* Centré horizontalement */
+        width: 100%;             /* Largeur responsive */
+        max-width: 1200px;       /* Taille maximale */
+        height: auto;            /* Garde les proportions */
+        margin-top: 20px;        /* Espacement avec le contenu précédent */
+    }
+
+
+#contacter {
+    text-align: center;
+}
+
+
+.AlignImgBout{
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    box-sizing:border-box;
+}
+#Contactimage{
+    border-radius: 30%;
+    margin-left: 30px;
+}
+/* Positionnement du bouton de connexion */
+.login-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 10px 15px;
+    background-color: #ffb2c4;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.login-bout {
+    display: inline-block;
+    top: 10px;
+    margin-left: 10px;
+    padding: 10px 15px;
+    background-color: #ffb2c4;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.login-btn:hover {
+    background-color: #eb997a;
+}
+.login-bouton:hover {
+    background-color: #eb997a;
+}
+/* Style du pop-up */
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    z-index: 1000;
+    display: none;
+}
+#popup:target {
+    display: block;
+}
+.popup h2 {
+    margin-top: 0;
+}
+.popup input {
+    width: 80%;
+    padding: 6px;
+    margin: 10px 0;
+    display: block;
+}
+.popup button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color:olivedrab;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.popup button:hover {
+    background-color: olive;
+}
+.close-btn {
+    background-color:hotpink;
+    margin-top: 5px;
+    display: block;
+    text-align: center;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+#Billet{
+    position: relative;
+    display: inline-block; /* Garde la taille de l'image */
+}
+
+.barcode {
+    font-family: 'Libre Barcode 39', cursive;
+    font-size: 40px;
+    position: absolute;
+    bottom: -49px; /* Ajuste la hauteur par rapport au bas */
+    left: 50%;
+    transform: translateX(-50%); /* Centre horizontalement */
+    padding: 5px;
+}
+
+.BoutonConnexion {
+    position: absolute; /* Place le bouton en haut à gauche */
+    top: 20px;
+    left: 20px;
+}
+.BoutonConnexion a {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #ffb2c4; /* Couleur rose */
+    color: white;
+    border-radius: 5px;
+    text-decoration: none; /* Enlève le soulignement */
+    font-weight: bold;
+}
+.BoutonConnexion a:hover {
+    background-color: #ff8a9e; /* Effet au survol */
+}

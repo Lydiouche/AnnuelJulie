@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Sam'Et A L'EZE</title>
+  <link rel="stylesheet" href="ProjetAnn.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!--En tête du site-web-->
+<header class="TitrePage">
+  <div class="BoutonConnexion"> 
+    <a href="#popup" class="login-bout">Se connecter</a>
+  </div>
+  <div class="TitreEtLogo">
+    <div id="TitreMenu">
+      <h1><strong>Menu Principal</strong></h1>
+    </div>
+    <img id="Logo" src="Logo festival.png" width="200" height="200">
+  </div>
+
+</header>
+<!-- Pop-up de connexion -->
+<div id="popup" class="popup">
+  <h2>Connexion</h2> 
+  <form method="POST" action="Connexion_site.php">
+    <input type="int" name="Id_Employe" placeholder="Id_Employe" required>
+    <input type="password" name="Code_Barre" placeholder="Code_Barre" required>
+    <button type="submit">Se connecter</button>
+  </form>
+  <a href="#" class="close-btn">Fermer</a>
+</div>
+
+<!-- Boutons pour accéder aux autres pages -->
+<div class="navigation">
+  <!-- Boutons sous forme de formulaires -->
+   <!--Le action permet de spécifier l'URL vers où est envoyé le formulaire-->
+   <!--Le get permet d'envoyer les données-->
+   <!--Button et submit permettent de soumettre le formulaire à l'URL-->
+  <form action="Accueil.html" method="get">
+    <button type="submit" class="onglets">Accueil</button>
+  </form>
+  <form action="Inscription.html" method="get">
+      <button type="submit" class="onglets">Inscription</button>
+  </form>
+  <form action="Mon compte.html" method="get">
+      <button type="submit" class="onglets">Mon compte</button>
+  </form>
+  <form action="Contact.html" method="get">
+      <button type="submit" class="onglets">Contact</button>
+  </form>
+</div>
+<!-- Barre de recherche sous le titre -->
+<form class="BarreRecherche">
+  <input type="text" name="text" class="BarreRecherche" placeholder="Rechercher" list="suggestions">
+  <button type="submit" name="submit" class="submit">
+    <i class="fas fa-search"></i> <!--Pour avoir la loupe-->
+  </button>
+  <datalist id="suggestions">
+    <option value="Visualisation festivalier/camping">
+    <option value="Gestion des musiciens">
+    <option value="Gestion des accès 'Employé'">
+    <option value="Tableau de bord récapitulatif">
+    <option value="Gestion des stocks pour la buvette/restaurant">
+    <option value="Gestion des objets perdus">
+  </datalist>
+</form>
+
+
+<div id="Dates">
+  <h2><i>Du 25 Mai au 26 Mai</i></h2> <br>
+</div>
+<div id="SecondTitre">
+  <h1><b>SAM’ET A L’EZE</b></h1>
+</div>
+
+<div id="accroche">
+  <h3>Le festival où l’on se sent bien!</h3>
+</div>
+<div class="BoutonInform">
+<form action="Informations.php" method="get">
+  <button type="submit" class="onglets">Pour en savoir plus...</button>
+</form>
+</div>
+<img id="decoration" src="Foules avec mains.jpg" width="1000" height="300">
+</body>
+</html>
+

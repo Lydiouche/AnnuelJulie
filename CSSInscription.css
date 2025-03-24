@@ -1,0 +1,153 @@
+/* Fait par Julie 19/01*/
+
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+    color: rgb(249, 240, 240);
+    background-color: rgb(250, 140, 172);
+    padding: 10px 15px; /* Agrandir le padding pour améliorer la lisibilité */
+    font-size: 22px; /* Augmenter la taille de la police */
+}
+
+
+#output {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+
+#buttons button {
+    padding: 10px 20px;
+    margin: 10px;
+    border: 2px solid white;
+    border-radius: 50px;
+    background-color: transparent;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+
+#buttons button:hover {
+    background-color: white;
+    color: rgb(250, 140, 172);
+}
+
+
+#buttons button.active {
+    background-color: white;
+    color:  #1bfb71;
+}
+
+
+#Logo {
+    width: 150px;
+    height: 150px;
+    border-radius: 20px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: block;
+    margin-left: 0;
+    margin-bottom: 20px;
+}
+
+
+#back-button {
+    position: absolute;
+    top: 10px; /* Distance depuis le haut */
+    left: 10px; /* Distance depuis le bord gauche */
+    text-decoration: none; /* Supprime le soulignement du lien */
+    background-color: #f0f0f0; /* Couleur de fond */
+    border: 1px solid #ccc; /* Bordure */
+    border-radius: 5px; /* Coins arrondis */
+    padding: 5px 10px; /* Espacement interne */
+    font-size: 14px; /* Taille de la police */
+    color: rgb(250, 140, 172);/* Couleur du texte */
+    font-weight: bold; /* Texte en gras */
+}
+
+
+#back-button:hover {
+    background-color:  #80faaf; /* Couleur au survol */
+    color: #ffffff; /* Couleur du texte au survol */
+}
+
+
+form input[type="radio"] + label {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    border: 2px solid white;
+    border-radius: 50px;
+    background-color: transparent;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+
+
+   
+}
+
+
+form input[type="radio"]:checked + label {
+    background-color: white;
+    color: rgb(250, 140, 172);
+}
+
+
+form input[type="radio"] {
+    display: none;
+}
+
+
+form {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50px;
+    padding: 30px;
+    display: inline-block;
+    width: 80%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+ font-size: 18px;
+}
+
+
+form div {
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+
+form input, form select, form textarea {
+    border: none;
+    padding: 10px;
+    border-radius: 20px;
+    width: 80%;
+    box-sizing: border-box;
+    font-size: 18px;
+}
+
+
+form input[type="submit"]:hover,
+form input[type="reset"]:hover {
+    background-color:  rgb(250, 140, 172);
+    color: rgb(253, 252, 252);
+}
+
+
+#available-places {
+        background-color: #ffb6d0; /* Couleur de l'arrière-plan */
+        border-radius: 10px; /* Coins arrondis */
+        padding: 5px 10px; /* Espacement interne */
+        display: inline-block; /* Ajuste la taille de l'arrière-plan au texte */
+        font-size: 28px; /* Ajuste la taille de la police si nécessaire */
+        color:rgb(255, 253, 254); /* Couleur du texte */
+        font-weight: bold; /* Rendre le texte plus lisible */
+    }
+ 
+
+
+
+
