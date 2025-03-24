@@ -1,0 +1,180 @@
+/* Styles globaux de la page */
+body {
+    background-color: #b0cba6;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Partie Titre, Barre de recherche et Logo */
+.TitrePage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    width: 100%;
+    max-width: 1200px;
+    box-sizing: border-box;
+}
+
+.TitreEtLogo {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    box-sizing: border-box;
+    padding: 0 20px;
+}
+
+#TitreMenu {
+    color: #ffe3ea;
+    text-align: center;
+    font-size: 36px;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    justify-content: right;
+}
+
+#Logo {
+    border-radius: 30%;
+    margin-left: 90px;
+}
+
+/* Pop-up de gestion des musiciens */
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    max-height: 80vh;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    z-index: 1000;
+    display: none;
+    overflow-y: auto;
+}
+
+.popup:target {
+    display: block;
+}
+
+.popup h2 {
+    margin-top: 0;
+}
+
+.popup input, .popup select, .popup button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.popup button {
+    background-color: olivedrab;
+    color: white;
+    cursor: pointer;
+}
+
+.popup button:hover {
+    background-color: olive;
+}
+
+.close-btn {
+    background-color: hotpink;
+    display: block;
+    text-align: center;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Style du tableau des musiciens */
+.musicien-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.musicien-table th, .musicien-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.musicien-table th {
+    background-color: #ffb2c4;
+    color: white;
+}
+
+.musicien-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Pour le bouton d'action */
+.container {
+    margin-top: 20px;
+}
+
+.container a {
+    background-color: #ffb2c4;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.container a:hover {
+    background-color: #eb997a;
+}
+
+button.submit {
+    width: 50px;
+    font-size: 16px;
+    background-color: #ffb2c4;
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 0 20px 20px 0;
+    transition: background-color 0.3s;
+    padding: 8px 12px;
+    height: 100%;
+}
+button.submit:hover {
+    background-color: #ffe3ea;
+}
+.onglets {
+    background-color:#ffb2c4;  /* Couleur de fond des boutons */
+    color: white;                      /* Couleur du texte */
+    padding: 12px 25px;                /* Espacement interne */
+    border: none;                      /* Enlève les bordures */
+    border-radius: 5px;                /* Coins arrondis */
+    font-size: 18px;                   /* Taille du texte */
+    cursor: pointer;                  /* Curseur pointer sur hover */
+    text-align: center;                /* Centrer le texte dans le bouton */
+    transition: background-color 0.3s; /* Animation de la couleur au survol */
+    flex:1;
+}
+/*Pour rajouter un effet au survol*/
+.onglets:hover {
+    background-color:#ffe3ea;
+}
+.navigation {
+    display: flex;               /* Active Flexbox */
+    flex-direction: row;      /* Aligne les boutons horizontalement */
+    justify-content: flex-start;
+    align-items: center;    
+    padding: 20px;               /* Espacement autour des boutons */
+    width: 100%;                /* Largeur du conteneur */
+    gap: 10px; /* Espace entre les boutons*/
+}
+
