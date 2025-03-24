@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Réservation Camping</title>
+    <link rel="stylesheet" href="camping.css">
+</head>
+<body>
+    <a id="back-button" href="inscription.html">Retour</a>
+    <img id="Logo" src="Logo festival.png" width="80" height="80">
+    <h1>Réservez votre emplacement et votre matériel</h1>
+
+    <div class="container">
+        <!-- Plan des emplacements -->
+        <section id="camping-plan">
+            <h2>Plan des emplacements</h2>
+            <div id="grid">
+                <!-- Boutons cliquables pour les emplacements -->
+                <label class="camp-spot">
+                    <input type="checkbox" name="spot" value="1">
+                    <span>1</span>
+                </label>
+                <label class="camp-spot">
+                    <input type="checkbox" name="spot" value="2">
+                    <span>2</span>
+                </label>
+                <label class="camp-spot">
+                    <input type="checkbox" name="spot" value="3">
+                    <span>3</span>
+                </label>
+                <label class="camp-spot taken">
+                    <input type="checkbox" name="spot" value="4" disabled>
+                    <span>4</span>
+                </label>
+                <label class="camp-spot">
+                    <input type="checkbox" name="spot" value="5">
+                    <span>5</span>
+                </label>
+                <label class="camp-spot taken">
+                    <input type="checkbox" name="spot" value="6" disabled>
+                    <span>6</span>
+                </label>
+                <label class="camp-spot">
+                    <input type="checkbox" name="spot" value="7">
+                    <span>7</span>
+                </label>
+                <label class="camp-spot">
+                    <input type="checkbox" name="spot" value="8">
+                    <span>8</span>
+                </label>
+                <label class="camp-spot">
+                    <input type="checkbox" name="spot" value="9">
+                    <span>9</span>
+                </label>
+                <label class="camp-spot">
+                    <input type="checkbox" name="spot" value="10">
+                    <span>10</span>
+                </label>
+            </div>
+        </section>
+
+        <!-- Formulaire de réservation -->
+        <section id="equipment-form">
+            <h2>Choisissez vos équipements</h2>
+            <form>
+                <!-- Aucun équipement -->
+                <div>
+                    <input type="checkbox" id="no-equipment" name="no-equipment">
+                    <label for="no-equipment">Aucun équipement</label>
+                </div>
+
+                <!-- Tente 2 places -->
+                <div>
+                    <input type="checkbox" id="tent" name="tent">
+                    <label for="tent">Tente 2 places</label>
+                    <input type="number" id="tent-quantity" name="tent-quantity" min="0" value="0" class="quantity">
+                </div>
+
+                <!-- Matelas -->
+                <div>
+                    <input type="checkbox" id="mattress" name="mattress">
+                    <label for="mattress">Matelas</label>
+                    <input type="number" id="mattress-quantity" name="mattress-quantity" min="0" value="0" class="quantity">
+                </div>
+
+                <!-- Duvet -->
+                <div>
+                    <input type="checkbox" id="duvet" name="duvet">
+                    <label for="duvet">Duvet</label>
+                    <input type="number" id="duvet-quantity" name="duvet-quantity" min="0" value="0" class="quantity">
+                </div>
+
+                <!-- Boutons d'action -->
+                <div>
+                    <input type="submit" value="Payer">
+                    <input type="reset" value="Réinitialiser">
+                </div>
+            </form>
+        </section>
+    </div>
+</body>
+</html>

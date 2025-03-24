@@ -1,0 +1,164 @@
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    margin-top: 30px;
+    color: rgb(249, 240, 240);
+    background-color: rgb(250, 140, 172);
+    padding: 5px 10px;
+    font-size: 16px;
+}
+
+#output {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+#buttons button {
+    padding: 8px 16px;
+    margin: 5px;
+    border: 2px solid white;
+    border-radius: 50px;
+    background-color: transparent;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+#buttons button:hover {
+    background-color: white;
+    color: rgb(250, 140, 172);
+}
+
+#buttons button.active {
+    background-color: white;
+    color: #1bfb71;
+}
+
+#Logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: block;
+}
+
+details {
+    background: rgb(147, 148, 147);
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    max-width: 70%;
+    cursor: pointer;
+    font-size: 10px;
+}
+
+details summary {
+    font-size: 10px;
+    font-weight: bold;
+    color: rgb(255, 253, 253);
+    padding: 3px;
+    border-radius: 5px;
+    background-color: rgb(147,148,147);
+    text-align: center;
+    cursor: pointer;
+    display: inline-block;
+}
+
+details[open] summary {
+    background-color: rgb(250, 140, 172);
+    color: white;
+}
+
+details input {
+    width: 100%;
+    padding: 5px;
+    margin-top: 3px;
+    border: 5px solid rgb(250, 140, 172);
+    border-radius: 5px;
+    font-size: 10.5px;
+}
+#back-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    text-decoration: none;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 4px 8px;
+    font-size: 12px;
+    color: rgb(250, 140, 172);
+    font-weight: bold;
+}
+
+#back-button:hover {
+    background-color: #80faaf;
+    color: #ffffff;
+}
+
+form input[type="radio"] + label {
+    display: inline-block;
+    padding: 8px 16px;
+    margin: 5px;
+    border: 2px solid white;
+    border-radius: 50px;
+    background-color: transparent;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+form input[type="radio"]:checked + label {
+    background-color: white;
+    color: rgb(250, 140, 172);
+}
+
+form input[type="radio"] {
+    display: none;
+}
+
+form {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 30px;
+    padding: 20px;
+    display: inline-block;
+    width: 60%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+form div {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+form input, form select, form textarea {
+    border: none;
+    padding: 8px;
+    display: inline-block;
+    width: 45%;
+    border-radius: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+form input[type="submit"]:hover,
+form input[type="reset"]:hover {
+    background-color: rgb(250, 140, 172);
+    color: rgb(253, 252, 252);
+}
+
+
+#available-places {
+    background-color: #ffb6d0;
+    border-radius: 8px;
+    padding: 4px 8px;
+    display: inline-block;
+    font-size: 18px;
+    color: rgb(255, 253, 254);
+    font-weight: bold;
+}

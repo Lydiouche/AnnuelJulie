@@ -1,0 +1,152 @@
+/* Style général */
+body {
+    font-family: 'Trebuchet MS', sans-serif;
+    margin: 20px;
+    background-color: rgb(250, 140, 172);
+    color: white;
+    font-size: 18px;
+}
+#back-button {
+    position: absolute;
+    top: 10px; /* Distance depuis le haut */
+    left: 10px; /* Distance depuis le bord gauche */
+    text-decoration: none; /* Supprime le soulignement du lien */
+    background-color: #f0f0f0; /* Couleur de fond */
+    border: 1px solid #ccc; /* Bordure */
+    border-radius: 5px; /* Coins arrondis */
+    padding: 5px 10px; /* Espacement interne */
+    font-size: 14px; /* Taille de la police */
+    color: rgb(250, 140, 172);/* Couleur du texte */
+    font-weight: bold; /* Texte en gras */
+}
+
+#back-button:hover {
+    background-color:  #80faaf; /* Couleur au survol */
+    color: #ffffff; /* Couleur du texte au survol */
+}
+#Logo {
+    width: 70px;
+    height: 70px;
+    border-radius: 20px;
+    position: absolute;
+    top: 7px;
+    right: 40px;
+    display: block;
+    margin-left: 0;
+    margin-bottom: 20px;
+}
+
+h1, h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+#camping-plan {
+    flex: 1;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    color: black;
+    text-align: center;
+}
+
+#grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.camp-spot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: lightgreen;
+    border-radius: 5px;
+    height: 40px;
+    cursor: pointer;
+    transition: border 0.3s ease;
+}
+
+.camp-spot input[type="checkbox"] {
+    display: none;
+}
+
+.camp-spot input[type="checkbox"]:checked + span {
+    background-color: rgb(250, 140, 172); /* Fond rose */
+    color: white; /* Texte blanc */
+    padding: 10px;
+    border-radius: 5px;
+    width: 81px;
+    display: inline-block;
+ 
+}
+
+.camp-spot.taken {
+    background-color: gray;
+    color: red;
+    cursor: not-allowed;
+}
+
+.camp-spot.taken span {
+    color: white;
+}
+
+#equipment-form {
+    flex: 1;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    color: white;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+form input[type="checkbox"] {
+    width: 24px;
+    height: 24px;
+    border: 2px solid #fcfdfc; /* Bleu plus doux */
+    background-color: #77faad; /* Fond légèrement bleu */
+    border-radius: 50%; /* Rond pour un design plus doux */
+    cursor: pointer;
+}
+
+form input[type="number"] {
+    width: 60px;
+    padding: 5px;
+}
+
+form input[type="submit"], form input[type="reset"] {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: white;
+    color: rgb(250, 140, 172);
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover, form input[type="reset"]:hover {
+    background-color: rgb(250, 140, 172);
+    color: white;
+}

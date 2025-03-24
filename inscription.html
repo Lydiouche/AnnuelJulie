@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription</title>
+    <link rel="stylesheet" href="inscription.css">
+</head>
+<body>
+    <img id="Logo" src="Logo festival.png" width="100" height="100">
+   
+    <!-- Affichage des emplacements disponibles -->
+    <div id="available-places">Emplacements disponibles: 100</div>
+   
+    <a id="back-button" href="choix_pass.html">Retour</a>
+
+    <h1>Formulaire d'inscription au festival Sam'et à l'eze</h1>
+    <form>
+
+        <!-- Nombre de places -->
+        <div>
+            Nombre de places: <input type="number" id="place" name="place" placeholder="Entrez le nombre de places">
+        </div>
+        <br>
+
+        <!-- Nom -->
+        <div>
+            Nom : <input type="text" id="nom" name="nom" placeholder="Entrez votre nom">
+        </div>
+        <br>
+
+        <!-- Prénom -->
+        <div>
+            Prénom : <input type="text" id="prenom" name="prenom" placeholder="Entrez votre prénom">
+        </div>
+        <br>
+
+        <!-- Age -->
+        <div> 
+            Age: <input type="number" id="age" name="age" placeholder="Entrez votre âge">
+        </div>
+
+        <!-- Formulaire de l'accompagnateur -->
+<details>
+    <summary>Accompagnateur d'une personne mineure</summary>
+    <br>
+    <div>
+        <label>Nom : <input type="text" name="accompagnateur_nom" placeholder="Nom"></label><br><br>
+        <label>Prénom : <input type="text" name="accompagnateur_prenom" placeholder="Prénom"></label><br><br>
+        <label>Email : <input type="email" name="accompagnateur_email" placeholder="Adresse e-mail"></label><br><br>
+    </div>
+</details>
+<br>
+<br>
+        <!-- Genre -->
+        <div>
+            Genre : 
+            <select id="genre" name="genre">
+                <option value="homme">Homme</option>
+                <option value="femme">Femme</option>
+                <option value="non-genré">Non-genré</option>
+                <option value="ne-pas-se-prononcer">Ne pas se prononcer</option>
+            </select>
+        </div>
+        <br>
+
+          <!-- Numéro de téléphone -->
+          <div>
+            Numéro de téléphone : <input type="tel" id="tel" name="tel" placeholder="Entrez votre numéro de tel">
+        </div>
+        <br>
+
+        <!-- Adresse-mail -->
+        <div>
+            Adresse-mail : <input type="email" id="email" name="email" placeholder="Entrez votre e-mail">
+        </div>
+        <br>
+
+        <!-- Mot de passe -->
+        <div>
+            Mot de passe : <input type="password" id="password" name="password" placeholder="Entrez votre mot de passe">
+        </div>
+        <br>
+       
+        <!-- Adresse postale -->
+<div>
+    Adresse postale : <br><br>
+
+    <div>
+        Numéro de rue : <input type="text" id="num-rue" name="num-rue" placeholder="Entrez le numéro de rue">
+    </div>
+    <br>
+
+    Rue : <input type="text" id="rue" name="rue" placeholder="Entrez votre rue">
+</div>
+<br>
+<div>
+    Code postal : <input type="text" id="code-postal" name="code-postal" placeholder="Entrez votre code postal">
+</div>
+<br>
+<div>
+    Ville : <input type="text" id="ville" name="ville" placeholder="Entrez votre ville">
+</div>
+<br>
+
+
+        <!-- Emplacement de camping -->
+        <div>
+            Voulez-vous avoir un emplacement de camping ? <br>
+            <input type="radio" id="camping-oui" name="festival" value="oui">
+            <label for="camping-oui">Oui</label>
+            <input type="radio" id="camping-non" name="festival" value="non">
+            <label for="camping-non">Non</label>
+        </div>
+        <br>
+
+          
+        <!-- Choix du tarif -->
+        <div>
+            Quel tarif choisissez-vous ?<br>
+            <input type="radio" id="tarif-groupe" name="tarif" value="Groupe (5 personnes ou plus)">
+            <label for="tarif-groupe">Groupe (5 personnes ou plus)</label>
+            <input type="radio" id="tarif-jeunes" name="tarif" value="Moins de 18 ans">
+            <label for="tarif-jeunes">Moins de 18 ans</label>
+            <input type="radio" id="tarif-adulte" name="tarif" value="Adulte">
+            <label for="tarif-adulte">Adulte</label>
+            <input type="radio" id="tarif-handicap" name="tarif" value="Personne en situation de handicap">
+            <label for="tarif-handicap">Personne en situation de handicap</label>
+        </div>
+        <br><br>
+
+         <!-- Mode de paiement -->
+         <div>
+            Mode de paiement : <br>
+            <input type="radio" id="mode_paiement_en_ligne" name="mode_paiement" value="En ligne">
+            <label for="mode_paiement_en_ligne">En ligne</label>
+            <input type="radio" id="mode_paiement_sur_place" name="mode_paiement" value="Sur place">
+            <label for="mode_paiement_sur_place">Sur place</label>
+        </div>
+        <br>
+
+        <!-- Bouton reinitialiser -->
+        <div>
+            <input type="reset" value="Réinitialiser"><br><br>
+        </div>
+
+         <!-- Bouton envoyer -->
+         <div>
+            <input type="submit" value="Envoyer le formulaire d'inscription"><br><br>
+        </div>
+
+    </form>
+</body>
+</html>
