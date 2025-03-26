@@ -3,7 +3,7 @@ body {
     text-align: center;
     margin-top: 30px;
     color: rgb(249, 240, 240);
-    background-color: rgb(250, 140, 172);
+    background-color: #b0cba6;
     padding: 5px 10px;
     font-size: 16px;
 }
@@ -121,12 +121,11 @@ form input[type="radio"] {
 }
 
 form {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color:rgb(249, 172, 194);
     border-radius: 30px;
     padding: 20px;
     display: inline-block;
     width: 60%;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     box-sizing: border-box;
     font-size: 14px;
 }

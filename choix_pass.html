@@ -3,31 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pass Festival</title>
+    <title>Choix du pass</title>
     <link rel="stylesheet" href="choix_pass.css">
 </head>
 <body>
+<header class="TitrePage">
+<div class="TitreEtLogo">
+    <div id="TitreMenu">
+      <h1><strong>Choix du pass</strong></h1>
+    </div>
+    <img id="Logo" src="Logo festival.png" width="200" height="200">
+</div> 
+</header>
+    <a id="back-button" href="Accueil.html">Retour</a>
     <div class="container">
-        <div class="pass">
-            <h2>Pass 1 Jour</h2>
-            <ul>
-                <li>Tarifs de groupe (5 personnes ou plus)</li>
-                <li>Entrée pour les moins de 18 ans (accompagnement obligatoire)</li>
-                <li>Entrée adulte</li>
-                <li>Entrée pour les personnes en situation de handicap</li>
-            </ul>
-            <a href="inscription2.html"><button>Choisir</button></a>
-        </div>
-        <div class="pass">
-            <h2>Pass 2 Jours</h2>
-            <ul>
-                <li>Tarifs de groupe (5 personnes ou plus)</li>
-                <li>Entrée pour les moins de 18 ans (accompagnement obligatoire)</li>
-                <li>Entrée adulte</li>
-                <li>Entrée pour les personnes en situation de handicap</li>
-            </ul>
-            <a href="inscription.html"><button>Choisir</button></a>
-        </div>
+        <form method="POST" action="inscription.php">
+            <div class="pass">
+                <h2>Pass 1 Jour</h2>
+                <ul>
+                    <li>Tarifs de groupe (5 personnes ou plus) ==> 15€/pers </li>
+                    <li>Entrée pour les moins de 18 ans (accompagnement obligatoire) ==> 12,5€ </li>
+                    <li>Entrée adulte ==> 19€</li>
+                    <li>Entrée pour les personnes en situation de handicap ==> 18€</li>
+                    <li>Entrée pour les enfants de moins de 10 ans ==> Gratuit</li>
+                </ul>
+                <input type="radio" name="pass" value="1 Jour" required> Choisir ce pass
+            </div>
+            <div class="pass">
+                <h2>Pass 2 Jours</h2>
+                <ul>
+                    <li>Tarifs de groupe (5 personnes ou plus) ==> 15€/pers </li>
+                    <li>Entrée pour les moins de 18 ans (accompagnement obligatoire) ==> 12,5€ </li>
+                    <li>Entrée adulte ==> 19€</li>
+                    <li>Entrée pour les personnes en situation de handicap ==> 18€</li>
+                    <li>Entrée pour les enfants de moins de 10 ans ==> Gratuit</li>
+                </ul>
+                <input type="radio" name="pass" value="2 Jours" required> Choisir ce pass
+            </div>
+            <br>
+            <input type="submit" value="Valider le choix du pass">
+        </form>
     </div>
 </body>
 </html>

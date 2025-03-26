@@ -1,33 +1,86 @@
+/* Style global du body */
 body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color: rgb(250, 140, 172);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
+    background-color: #b0cba6;
+    color: rgb(249, 240, 240);
+    text-align: center;
+    margin-top: 30px;
+    padding: 5px 10px;
+    font-size: 16px;
 }
 
+/* Partie Titre, Barre de recherche et Logo */
+.TitrePage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    width: 100%;
+    max-width: 1200px;
+    box-sizing: border-box;
+}
+
+/* Zone contenant le titre et le logo */
+.TitreEtLogo {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    box-sizing: border-box;
+    padding: 0 20px;
+}
+
+#TitreMenu {
+    color: #ffe3ea;
+    font-size: 36px;
+    position: absolute; /* Permet de positionner l'élément par rapport à la page */
+    top: 6.5%; /* Place le titre à 50% de la hauteur de la page */
+    left: 50%; /* Place le titre à 50% de la largeur de la page */
+    transform: translate(-50%, -50%); /* Centre le titre exactement au milieu */
+    text-align: center; /* Centre le texte horizontalement */
+}
+
+#Logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: block;
+}
+
+/* Conteneur principal pour aligner les cartes */
 .container {
+    margin-top: 40px;
     display: flex;
     gap: 20px;
+    justify-content: center;
+    margin-bottom: 100px;
+    color: #b0cba6;
 }
 
+/* Style des blocs pass */
 .pass {
     background-color: #fff;
-    padding: 20px;
+    padding: 30px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
-    width: 250px;
+    width: 450px;
+    margin-bottom: 50px;
 }
 
+/* Titre des pass */
 .pass h2 {
+    text-align: center;
     color: #ff69b4;
     font-size: 24px;
     margin-bottom: 20px;
 }
 
+/* Liste des éléments */
 .pass ul {
     list-style-type: none;
     padding: 0;
@@ -39,16 +92,59 @@ body {
     margin-bottom: 10px;
 }
 
+/* Cible les boutons de type submit */
+input[type="submit"] {
+    background-color: #ff69b4; /* Couleur de fond */
+    color: white; /* Couleur du texte */
+    border: none; /* Supprime la bordure */
+    border-radius: 5px; /* Ajoute des coins arrondis */
+    padding: 10px 20px; /* Ajoute de l'espace intérieur */
+    cursor: pointer; /* Change le curseur au survol */
+}
+
+/* Effet au survol */
+input[type="submit"]:hover {
+    background-color: #ff85c2; /* Couleur plus claire au survol */
+}
+
+/* Style par défaut des boutons radio */
+input[type="radio"] {
+    accent-color: #ff69b4; /* Change la couleur de sélection */
+}
+
+/* Style du bouton */
 .pass button {
-    background-color: #ff9fe1;
+    padding: 8px 16px;
+    margin: 5px;
+    border: 2px solid white;
+    border-radius: 50px;
+    background-color: transparent;
     color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
+    font-size: 14px;
     cursor: pointer;
-    font-size: 16px;
 }
 
 .pass button:hover {
+    background-color: white;
+    color: rgb(250, 140, 172);
+}
+
+/* Bouton retour */
+#back-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    text-decoration: none;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 4px 8px;
+    font-size: 12px;
+    color: rgb(250, 140, 172);
+    font-weight: bold;
+}
+
+#back-button:hover {
     background-color: #80faaf;
+    color: #ffffff;
 }
