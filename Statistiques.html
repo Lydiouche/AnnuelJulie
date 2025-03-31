@@ -1,0 +1,99 @@
+<?php
+session_start();
+include("Connexion.php"); // Connexion à la base de données
+
+// Vérifier si l'utilisateur a les droits nécessaires
+if (!isset($_SESSION["Id_Employe"]) || $_SESSION["Acces"] !== 'Responsable') {
+    header("Location: Accueil.html");
+    exit();
+}
+
+// Statistiques globales
+
+// 1. Nombre total de réservations, avec ou sans emplacement de camping
+$sql_total_reservations = "SELECT COUNT(*) AS totalReservations FROM Reservation";
+$stmt_total_reservations = $pdo->prepare($sql_total_reservations);
+$stmt_total_reservations->execute();
+$totalReservations = $stmt_total_reservations->fetch(PDO::FETCH_ASSOC)['totalReservations'];
+
+// 2. Nombre de réservations avec emplacement de camping
+$sql_camping_reservations = "SELECT COUNT(*) AS totalCampingReservations
+                              FROM Reservation r
+                              JOIN Emplacement_Camping e ON r.Num_Emplacement = e.Num_Emplacement
+                              WHERE r.Statut_Payement = 1";
+$stmt_camping_reservations = $pdo->prepare($sql_camping_reservations);
+$stmt_camping_reservations->execute();
+$totalCampingReservations = $stmt_camping_reservations->fetch(PDO::FETCH_ASSOC)['totalCampingReservations'];
+
+// 3. Nombre de places disponibles au camping
+$sql_camping = "SELECT COUNT(*) AS totalCamping, 
+                (SELECT COUNT(*) FROM Reservation WHERE Statut_Payement = 1) AS reservedCamping 
+                FROM Emplacement_Camping";
+$stmt_camping = $pdo->prepare($sql_camping);
+$stmt_camping->execute();
+$camping = $stmt_camping->fetch(PDO::FETCH_ASSOC);
+
+// 4. Produits en stock et seuils d'alerte
+$sql_stock = "SELECT p.NomP, s.Quantite, p.Seuil_Alerte 
+              FROM Stock s
+              JOIN Produit p ON s.Id_Produit = p.Id_Produit
+              WHERE s.Quantite <= p.Seuil_Alerte";
+$stmt_stock = $pdo->prepare($sql_stock);
+$stmt_stock->execute();
+$produitsAlerte = $stmt_stock->fetchAll(PDO::FETCH_ASSOC);
+
+// 5. Budget des musiciens
+$sql_budget = "SELECT SUM(Budget) AS totalBudget FROM Musicien";
+$stmt_budget = $pdo->prepare($sql_budget);
+$stmt_budget->execute();
+$budgetMusiciens = $stmt_budget->fetch(PDO::FETCH_ASSOC);
+
+// 6. Quantité de produits vendus ou utilisés
+$sql_ventes = "SELECT SUM(Quantite) AS totalVentes FROM Stock";
+$stmt_ventes = $pdo->prepare($sql_ventes);
+$stmt_ventes->execute();
+$ventes = $stmt_ventes->fetch(PDO::FETCH_ASSOC);
+?>
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau de Bord des Statistiques</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Optionnel : ajouter des styles CSS -->
+</head>
+<body>
+
+    <h1>Tableau de Bord des Statistiques</h1>
+
+    <h2>1. Statistiques Globales</h2>
+
+    <h3>Entrées (Réservations) :</h3>
+    <p><strong>Total des réservations (avec ou sans emplacement de camping) : </strong><?php echo $totalReservations; ?> réservations</p>
+    <p><strong>Réservations avec emplacement de camping : </strong><?php echo $totalCampingReservations; ?> réservations</p>
+
+    <h3>2. Camping</h3>
+    <p><strong>Places disponibles :</strong> <?php echo $camping['totalCamping'] - $camping['reservedCamping']; ?> places</p>
+    <p><strong>Places réservées :</strong> <?php echo $camping['reservedCamping']; ?> places</p>
+
+    <h3>3. Produits en Stock</h3>
+    <?php if ($produitsAlerte): ?>
+        <p><strong>Produits en alerte :</strong></p>
+        <ul>
+            <?php foreach ($produitsAlerte as $produit): ?>
+                <li><?php echo $produit['NomP']; ?> (Quantité : <?php echo $produit['Quantite']; ?>) - Seuil d'alerte : <?php echo $produit['Seuil_Alerte']; ?></li>
+            <?php endforeach; ?>
+        </ul>
+    <?php else: ?>
+        <p>Aucun produit n'est en alerte.</p>
+    <?php endif; ?>
+
+    <h3>4. Budget des Musiciens</h3>
+    <p><strong>Budget total des musiciens :</strong> <?php echo $budgetMusiciens['totalBudget']; ?> €</p>
+
+    <h3>5. Quantité de Produits Vendus</h3>
+    <p><strong>Produits utilisés ou vendus :</strong> <?php echo $ventes['totalVentes']; ?> unités</p>
+
+</body>
+</html>

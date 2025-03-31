@@ -178,3 +178,50 @@ button.submit:hover {
     gap: 10px; /* Espace entre les boutons*/
 }
 
+.error-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 0, 0, 0.9);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    z-index: 1000;
+}
+
+.error-popup .close-btn {
+    display: inline-block;
+    margin-top: 10px;
+    background-color: white;
+    color: red;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.error-popup .close-btn:hover {
+    background-color: darkred;
+    color: white;
+}
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: white;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+th {
+    background-color: #ffb2c4;
+    color: white;
+}
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}

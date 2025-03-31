@@ -297,3 +297,28 @@ h4{
 .BoutonConnexion a:hover {
     background-color: #ff8a9e; /* Effet au survol */
 }
+
+/* Style du tableau des musiciens */
+.Tabl_musicien {
+    width: 90%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto; /* Centre le tableau horizontalement */
+    text-align: center;
+}
+
+.Tabl_musicien th, .Tabl_musicien td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+    text-align: center; /* Centre le texte des cellules */
+}
+.Tabl_musicien th {
+    background-color: #ffb2c4;
+    color: white;
+}
+.Tabl_musicien tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
